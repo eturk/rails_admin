@@ -6,7 +6,7 @@ module RailsAdmin
   module Adapters
     module Mongoid
       STRING_TYPE_COLUMN_NAMES = [:name, :title, :subject]
-      DISABLED_COLUMN_TYPES = ['Range', 'Moped::BSON::Binary', 'BSON::Binary', 'Mongoid::Geospatial::Point']
+      DISABLED_COLUMN_TYPES = ['Range', 'Moped::BSON::Binary', 'BSON::Binary', 'Mongoid::Geospatial::Point', 'Mongoid::TagsArentHard::Tags']
       ObjectId = defined?(Moped::BSON) ? Moped::BSON::ObjectId : BSON::ObjectId # rubocop:disable ConstantName
 
       def new(params = {})
